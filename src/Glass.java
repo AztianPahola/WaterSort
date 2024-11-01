@@ -6,8 +6,12 @@ public class Glass {
 
     }
 
-    public Glass(int[] colors){
-        this.colors = colors;
+    public Glass(char a, char b, char c, char d){
+        this.colors[0] = a;
+        this.colors[1] = b;
+        this.colors[2] = c;
+        this.colors[3] = d;
+
     }
 
     public int[] getColors(){

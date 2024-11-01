@@ -15,10 +15,21 @@ public class Main {
         if (!inputColors.isEmpty() && inputColors.length() % 4 == 0){
             int numGlasses = inputColors.length()/4;
             glasses = new Glass[numGlasses];
-            for (int i = 0; i < numGlasses; i++) {
 
+            for (int i = 0; i < numGlasses; i++) {  // Create glasses from input
+                glasses[i] = new Glass(inputColors.charAt(i*4),inputColors.charAt(i*4+1),
+                                        inputColors.charAt(i*4+2),(inputColors.charAt(i*4+3)));
+            }
+
+            for (int i = 0; i < glasses.length; i++) {
+                for (int j = 0; j < 4; j++) {
+                    System.out.println(((char)glasses[i].getColors()[j]));
+                }
+                System.out.println();
             }
         }
+
+
         System.out.println();
     }
 }
