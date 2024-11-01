@@ -1,0 +1,21 @@
+
+Problem: You are given X >= 8 number of glasses. These glasses can hold 4 layers of color. X-2 of the glasses start
+filled randomly with X-2 colors. You can only pour a color into an empty glass or onto the same color. Using the given
+parameters, create an algorithm to sort these glasses such that each glass only contains one color. Make sure your
+algorithm outputs the order of moves that need to be made to perform the sorting.
+
+OBJs:
+N/A
+
+Input:
+Input will be a string of characters, representing colors (i.e. o = orange, g = green, etc.), i.e. ogogmbmb
+
+Algorithm:
+
+Brute force-
+Split the input into groups of four, creating corresponding integer arrays inside of an array. Create two empty integer
+arrays with four
+indexes, each equaling 0; These will represent the two empty cups. Look at the top color of each array and determine
+each potential move by checking if it's the same or if the target == 0. If the # of moves exceeds X * 10, we will assume
+it's looping and will not find the solution and will move onto the next permutation. Track each move that's made and
+output as: Glass 1 to Glass 3, etc...
